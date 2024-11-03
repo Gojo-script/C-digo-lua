@@ -1,0 +1,14 @@
+local Players = game:GetService("Players")
+
+Players.PlayerAdded:Connect(function(player)
+    local playerGui = player:WaitForChild("PlayerGui")
+    local screenGui = Instance.new("ScreenGui")
+    screenGui.Parent = playerGui
+
+    local logo = Instance.new("ImageLabel")
+    logo.Image = "https://i.imgur.com/V6L7tIs.jpeg" -- URL da logo
+    logo.Size = UDim2.new(0, 100, 0, 100)
+    logo.Position = UDim2.new(0.5, -50, 0.5, -50)
+    logo.BackgroundTransparency = 1
+    logo.Parent = screenGui
+end)
